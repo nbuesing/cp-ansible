@@ -1,5 +1,6 @@
 # Maintained by Ansible
 listeners=PLAINTEXT://:{{broker.config.port}}
+advertised.listeners=PLAINTEXT://{{kafka.broker.ip}}:{{broker.config.port}}
 
 {% include './includes/base_server.properties.j2' %}
 
